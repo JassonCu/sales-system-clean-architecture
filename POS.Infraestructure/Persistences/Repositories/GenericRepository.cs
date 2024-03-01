@@ -1,7 +1,8 @@
 ﻿using POS.Infraestructure.Persistences.Interfaces;
-using POS.Infraestructure.Commons.Bases;
 using POS.Infraestructure.Helpers;
 using System.Linq.Dynamic.Core;
+using POS.Infraestructure.Commons.Bases.Request;
+using POS.Infraestructure.Commons.Bases;
 
 namespace POS.Infraestructure.Persistences.Repositories
 {

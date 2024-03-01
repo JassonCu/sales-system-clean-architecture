@@ -1,5 +1,4 @@
-﻿using POS.Infraestructure.Commons.Bases;
-using System.Runtime.CompilerServices;
+﻿using POS.Infraestructure.Commons.Bases.Request;
 
 namespace POS.Infraestructure.Helpers
 {
