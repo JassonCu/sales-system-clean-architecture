@@ -3,6 +3,7 @@ using POS.Domain.Entities;
 using POS.Infraestructure.Commons.Bases.Reponse;
 using POS.Infraestructure.Commons.Bases.Request;
 using POS.Infraestructure.Persistences.Contexts;
+using POS.Utilities.Statics;
 
 namespace POS.Infraestructure.Persistences.Repositories
 {
@@ -84,7 +85,7 @@ namespace POS.Infraestructure.Persistences.Repositories
         public async Task<IEnumerable<Category>> ListSelectCategories()
         {
             var categories = await _context.Categories
-                .Where(x => x.State.Equals(1) && x.AuditDeleteUser == null && x.AuditDeleteDate == null)
+                .Where(x => x.State.Equals((int) StateTypes.Active) && x.AuditDeleteUser == null && x.AuditDeleteDate == null)
                 .AsNoTracking().ToListAsync();
 
             return categories;
